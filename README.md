@@ -12,7 +12,7 @@ A complete, research-grade implementation for automated pneumonia diagnosis from
 
 The pipeline ingests labeled CXRs (NORMAL/PNEUMONIA), applies standardized preprocessing and augmentation, runs parallel inference across five models, aggregates outputs via weighted voting, and produces XAI explanations (Grad-CAM heatmaps and SHAP plots).
 
-![System Architecture](./CCG119_SOURCE_FILE_LINKS/Architecture Diagram.png)
+![System Architecture](CCG119_SOURCE_FILE_LINKS/ArchitectureDiagram.png)
 ![System Architecture](./screenshots/2.png)
 ## Repository Structure
 ```
