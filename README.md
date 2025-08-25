@@ -15,20 +15,20 @@ The pipeline ingests labeled CXRs (NORMAL/PNEUMONIA), applies standardized prepr
 ![System Architecture](https://github.com/SushenGrover/X-Ray-Pneumonia-Detection-Research-Paper/blob/main/System%20Architecture.png?raw=true)
 
 ## Repository Structure
-
+```
 .
 ├── Dataset/ # Instructions + expected Kaggle CXR structure (train/val/test)
 ├── Models/ # SVM, RF, VGG-16, ResNet, EfficientNet, Ensemble + saved weights
 ├── Explainable AI/ # Grad-CAM and SHAP scripts for trained models
 └── Research Paper/ # Final Research Paper.pdf (peer-reviewed manuscript)
-
+```
 
 ## Dataset
 
 - Source: Chest X-Ray (Pneumonia) dataset (Kaggle).
 - Labels: NORMAL, PNEUMONIA with predefined train/ val/ test splits.
 - Expected structure:
-
+```
 Dataset/
 ├── train/
 │ ├── NORMAL/
@@ -39,7 +39,7 @@ Dataset/
 └── test/
 ├── NORMAL/
 └── PNEUMONIA/
-
+```
 
 ## Preprocessing and Augmentation
 
@@ -127,28 +127,14 @@ python "Explainable AI"/generate_shap.py --model_path Models/resnet_model.h5 --i
 - ResNet Training Curves  
   ![ResNet Graph](https://github.com/SushenGrover/X-Ray-Pneumonia-Detection-Research-Paper/blob/main/ResNet%20Graph%20Report.jpg?raw=true)
 
-## Citation
-
-If this work is used in research, please cite:
-@inproceedings{debnath2024explainable,
-title={Explainable AI for Chest X-Ray Pneumonia Detection},
-author={Debnath, Archishman and Shrivastava, Ayush and Abhay, Aryan and Grover, Sushen},
-booktitle={Proceedings of the International Conference on...},
-year={2024}
-}
-
 
 ## Contributors
 
-- Archishman Debnath
+- Sushen Grover
 - Ayush Shrivastava
 - Aryan Abhay
-- Sushen Grover
+- Archishman Debnath
 
-## License
+## Acknowledgement
 
-Please add a LICENSE file (e.g., MIT) to clarify reuse and citation.
-
-## Disclaimer
-
-This repository and its outputs are for research and educational purposes only and are not a substitute for professional medical advice or diagnostic tools. Clinical deployment requires regulatory compliance, rigorous validation, and oversight.
+Special thanks to Dr. Tamilarasi K, Assistant Professor, VIT Chennai, for her invaluable guidance and continuous support throughout the course of this research.
