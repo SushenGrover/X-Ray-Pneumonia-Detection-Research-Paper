@@ -13,7 +13,7 @@ A complete, research-grade implementation for automated pneumonia diagnosis from
 The pipeline ingests labeled CXRs (NORMAL/PNEUMONIA), applies standardized preprocessing and augmentation, runs parallel inference across five models, aggregates outputs via weighted voting, and produces XAI explanations (Grad-CAM heatmaps and SHAP plots).
 
 ![System Architecture](CCG119_SOURCE_FILE_LINKS/ArchitectureDiagram.png)
-![System Architecture](./screenshots/2.png)
+
 ## Repository Structure
 ```
 .
@@ -109,24 +109,6 @@ python Models/train.py --model resnet --epochs 15 --batch_size 16
 
 - Trained weights are saved under `Models/`.
 - Use provided notebooks/scripts to compute accuracy, precision, recall, F1, ROC-AUC, and confusion matrices.
-
-## Generate Explanations
-
-Grad-CAM example (ResNet)
-python "Explainable AI"/generate_gradcam.py --model_path Models/resnet_model.h5 --image_path path/to/image.jpeg
-
-SHAP example (ResNet)
-python "Explainable AI"/generate_shap.py --model_path Models/resnet_model.h5 --image_path path/to/image.jpeg
-
-
-## Figures
-
-- VGG-16 Training Curves  
-  ![VGG-16 Graph](https://github.com/SushenGrover/X-Ray-Pneumonia-Detection-Research-Paper/blob/main/VGG16%20Graph%20Report.jpg?raw=true)
-
-- ResNet Training Curves  
-  ![ResNet Graph](https://github.com/SushenGrover/X-Ray-Pneumonia-Detection-Research-Paper/blob/main/ResNet%20Graph%20Report.jpg?raw=true)
-
 
 ## Contributors
 
