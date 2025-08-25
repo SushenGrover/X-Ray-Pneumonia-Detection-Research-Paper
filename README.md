@@ -1,19 +1,19 @@
 # Explainable AI for Chest X-Ray Pneumonia Detection: A Hybrid Ensemble Learning Approach
 
 A complete, research-grade implementation for automated pneumonia diagnosis from chest X-ray (CXR) images using a hybrid ensemble of deep learning and classical machine learning, with integrated Explainable AI (XAI) for transparent, clinician-trustworthy predictions.
-
+---
 ## Highlights
 
 - Hybrid ensemble combining VGG-16, ResNet, EfficientNet, SVM, and Random Forest for superior accuracy and robustness.
 - End-to-end pipeline: data preparation, training, ensemble aggregation, and explainability via Grad-CAM and SHAP.
 - Clinically oriented transparency: heatmaps and feature attributions to validate and interpret predictions.
-
+---
 ## System Overview
 
 The pipeline ingests labeled CXRs (NORMAL/PNEUMONIA), applies standardized preprocessing and augmentation, runs parallel inference across five models, aggregates outputs via weighted voting, and produces XAI explanations (Grad-CAM heatmaps and SHAP plots).
 
 ![System Architecture](CCG119_SOURCE_FILE_LINKS/ArchitectureDiagram.png)
-
+---
 ## Repository Structure
 ```
 .
@@ -22,7 +22,7 @@ The pipeline ingests labeled CXRs (NORMAL/PNEUMONIA), applies standardized prepr
 ├── Explainable AI/ # Grad-CAM and SHAP scripts for trained models
 └── Research Paper/ # Final Research Paper.pdf (peer-reviewed manuscript)
 ```
-
+---
 ## Dataset
 
 - Source: Chest X-Ray (Pneumonia) dataset (Kaggle).
@@ -40,19 +40,19 @@ Dataset/
 ├── NORMAL/
 └── PNEUMONIA/
 ```
-
+---
 ## Preprocessing and Augmentation
 
 - Resize to a consistent input resolution (e.g., 512×512).
 - Normalize pixel intensities (e.g., divide by 255) for stable optimization.
 - On-the-fly augmentation: horizontal flips, small rotations (±15°), mild Gaussian noise, brightness/contrast adjustments.
-
+---
 ## Models
 
 - Deep Learning: VGG-16, ResNet, EfficientNet (transfer learning and fine-tuning on CXR).
 - Classical Machine Learning: SVM and Random Forest on derived image features.
 - Ensemble: Weighted voting over class probabilities from all five base models.
-
+---
 ## Performance (per reported experiments)
 
 | Model         | Accuracy |
@@ -67,13 +67,13 @@ Dataset/
 Notes:
 - VGG-16 and ResNet showed strong, stable learning and high validation alignment.
 - EfficientNet underperformed with training instability, suggesting gains via model-specific hyperparameter tuning.
-
+---
 ## Explainability (XAI)
 
 - Grad-CAM: Class-discriminative heatmaps highlighting regions influencing CNN decisions.
 - SHAP: Quantitative attributions indicating how regions/features drive predictions toward NORMAL or PNEUMONIA.
 - Combined, these tools support clinician trust and facilitate technical debugging and bias checks.
-
+---
 ## Getting Started
 
 ### Prerequisites
@@ -97,7 +97,7 @@ pip install -r requirements.txt
 ### Dataset Setup
 - Download the Kaggle Chest X-Ray (Pneumonia) dataset.
 - Unzip and place it under `Dataset/` following the expected structure above.
-
+---
 ## Training and Evaluation
 
 Train VGG-16 (example)
@@ -109,14 +109,14 @@ python Models/train.py --model resnet --epochs 15 --batch_size 16
 
 - Trained weights are saved under `Models/`.
 - Use provided notebooks/scripts to compute accuracy, precision, recall, F1, ROC-AUC, and confusion matrices.
-
+---
 ## Contributors
 
 - Sushen Grover
 - Ayush Shrivastava
 - Aryan Abhay
 - Archishman Debnath
-
+---
 ## Acknowledgement
 
 Special thanks to Dr. Tamilarasi K, Assistant Professor, VIT Chennai, for her invaluable guidance and continuous support throughout the course of this research.
