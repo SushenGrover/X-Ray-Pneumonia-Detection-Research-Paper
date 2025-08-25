@@ -12,8 +12,8 @@ A complete, research-grade implementation for automated pneumonia diagnosis from
 
 The pipeline ingests labeled CXRs (NORMAL/PNEUMONIA), applies standardized preprocessing and augmentation, runs parallel inference across five models, aggregates outputs via weighted voting, and produces XAI explanations (Grad-CAM heatmaps and SHAP plots).
 
-![System Architecture]([https://github.com/SushenGrover/X-Ray-Pneumonia-Detection-Research-Paper/blob/main/System%20Architecture.png?raw=true](https://github.com/SushenGrover/X-Ray-Pneumonia-Detection-Research-Paper/blob/3f70a32e4aedfda0d012f80514b0885b3caca6eb/CCG119_SOURCE_FILE_LINKS/draw.io%20Architecture%20Diagram.pdf))
-
+![System Architecture](./CCG119_SOURCE_FILE_LINKS/draw.io Architecture Diagram.pdf)
+![System Architecture](./screenshots/2.png)
 ## Repository Structure
 ```
 .
